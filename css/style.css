@@ -1,0 +1,473 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  background: #000000;
+  font-weight: 400;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper .main {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.active-button {
+  border-bottom: 3px solid #f97ad1;
+  padding-bottom: 5px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background: #0c0d21;
+}
+.header__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__container .logo {
+  max-width: 80px;
+  max-height: 80px;
+}
+.header__container .logo img {
+  margin-bottom: -30px;
+  width: 100%;
+  height: 100%;
+}
+.header__container .menu {
+  text-transform: uppercase;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+}
+.header__container .menu .menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.header__container .menu .menu-list .item {
+  text-align: center;
+}
+.header__container .menu .menu-list .item .menu-link {
+  color: #fffeff;
+}
+.header__container .menu .first {
+  margin-right: 25px;
+}
+.header__container .logo-Social-list {
+  display: flex;
+}
+.header__container .logo-Social-list .first {
+  margin-right: 25px;
+}
+.header__container .logo-Social-list .logo-Social {
+  max-width: 25px;
+  max-height: 25px;
+}
+.header__container .logo-Social-list .logo-Social img {
+  width: 100%;
+  height: 100%;
+}
+
+.main .link {
+  font-weight: 900;
+  color: #f97ad1;
+}
+.main .link:hover {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg, rgb(153, 69, 255) 0%, rgb(20, 241, 149) 100%);
+}
+.main .FAQs {
+  margin: 20px 0 10px;
+  margin: 0 auto 60px;
+}
+.main .FAQs .heading-primary {
+  font-size: 2.5em;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  color: #ffffff;
+}
+.main .FAQs .accordion dd,
+.main .FAQs .accordion__panel {
+  background-color: #ffffff;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.main .FAQs .accordion p {
+  padding: 1em 2em 1em 2em;
+}
+.main .FAQs .accordion {
+  position: relative;
+  background-color: #16183b;
+}
+.main .FAQs .accordionTitle,
+.main .FAQs .accordion__Heading {
+  background-color: #0c0d21;
+  text-align: center;
+  font-weight: 700;
+  padding: 1.5em;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.5s ease-in-out;
+}
+.main .FAQs .accordionTitle:before,
+.main .FAQs .accordion__Heading:before {
+  content: "+";
+  font-size: 1.5em;
+  line-height: 0.5em;
+  float: left;
+  transition: transform 0.3s ease-in-out;
+}
+.main .FAQs .accordionTitle:hover,
+.main .FAQs .accordion__Heading:hover {
+  background-color: #f749c0;
+}
+.main .FAQs .accordionTitleActive,
+.main .FAQs .accordionTitle.is-expanded {
+  background-color: #f749c0;
+}
+.main .FAQs .accordionTitleActive:before,
+.main .FAQs .accordionTitle.is-expanded:before {
+  transform: rotate(-225deg);
+}
+.main .FAQs .accordionItem {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  transition: max-height 1s;
+}
+@media screen and (min-width: 48em) {
+  .main .FAQs .accordionItem {
+    max-height: 15em;
+    transition: max-height 0.5s;
+  }
+}
+.main .FAQs .accordionItem.is-collapsed {
+  max-height: 0;
+}
+.main .FAQs .no-js .accordionItem.is-collapsed {
+  max-height: auto;
+}
+.main .FAQs .animateIn {
+  animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+.main .FAQs .animateOut {
+  animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+    transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+  }
+}
+.main .advantage__container {
+  margin: 40px auto 10px;
+}
+.main .advantage__container h2 {
+  font-size: 2.5em;
+  margin: 2em;
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  color: #ffffff;
+}
+.main .advantage__container .advantage-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .advantage__container .advantage-list .advantage-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 33%;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+.main .advantage__container .advantage-list .advantage-item .advantage-logo {
+  height: 100%;
+  margin-right: 20px;
+}
+.main .advantage__container .advantage-list .advantage-item .text {
+  color: #ffffff;
+}
+.main .advantage__container .advantage-list .advantage-item .text .heading {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.main .advantage__container .advantage-list .advantage-item .text .advantage-text {
+  width: 95%;
+  font-size: 18px;
+  line-height: 22px;
+}
+.main .advantage__container .advantage-list .advantage-item:nth-child(even) {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-right: 0;
+}
+.main .About {
+  margin-top: 60px;
+}
+.main .About__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .About__container .Widget {
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+}
+.main .About__container .body-About {
+  color: #ffffff;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  flex: 1 1 50%;
+}
+.main .About__container .body-About .Name {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  display: block;
+  margin-bottom: 15px;
+}
+.main .About__container .body-About .Post {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 38px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg, rgb(153, 69, 255) 0%, rgb(20, 241, 149) 100%);
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.main .About__container .body-About .Test {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 38px;
+  margin-bottom: 15px;
+}
+.main .About__container .body-About .text-list {
+  margin-top: 20px;
+}
+.main .About__container .body-About .text-list .item {
+  margin-bottom: 20px;
+  padding-left: 50px;
+  position: relative;
+}
+.main .About__container .body-About .text-list .item::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../img/cheque.svg") 0 0/100% no-repeat;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main .Security__container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 40px;
+}
+.main .Security__container .Name {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 38px;
+  display: block;
+  margin-bottom: 25px;
+}
+.main .Security__container .Test {
+  max-width: 70%;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 38px;
+}
+.main .Security__container .text-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+.main .Security__container .text-list .item {
+  max-width: 85%;
+  line-height: 28px;
+  margin-bottom: 15px;
+  padding-left: 50px;
+  position: relative;
+}
+.main .Security__container .text-list .item::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../img/cheque.svg") 0 0/100% no-repeat;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+.main .Security__container .text-list .item:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  width: 100%;
+  height: 45px;
+  background: #0c0d21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .copyright {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
